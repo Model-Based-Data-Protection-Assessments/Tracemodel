@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tracemodel" nsURI="http://www.example.org/tracemodel" nsPrefix="tracemodel">
+  <eClassifiers xsi:type="ecore:EClass" name="TracesList">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="processNodeTraces" upperBound="-1"
+        eType="#//Trace" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Trace">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="processing" eType="ecore:EClass ../../mdpa.gdpr.metamodel/model/GDPR.ecore#//Processing"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="node" eType="ecore:EClass ../../mdpa.dfd.dataflowdiagram/model/dataflowdiagram.ecore#//Node"/>
+  </eClassifiers>
+</ecore:EPackage>
