@@ -9,4 +9,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="processing" eType="ecore:EClass ../../mdpa.gdpr.metamodel/model/GDPR.ecore#//Processing"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="node" eType="ecore:EClass ../../mdpa.dfd.dataflowdiagram/model/dataflowdiagram.ecore#//Node"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FlowList">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="flowList" upperBound="-1"
+        eType="ecore:EClass ../../mdpa.dfd.dataflowdiagram/model/dataflowdiagram.ecore#//Flow"/>
+  </eClassifiers>
 </ecore:EPackage>

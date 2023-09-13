@@ -17,5 +17,8 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tracemodel.ecore#//Trace/processing"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tracemodel.ecore#//Trace/node"/>
     </genClasses>
+    <genClasses ecoreClass="tracemodel.ecore#//FlowList">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tracemodel.ecore#//FlowList/flowList"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
