@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated tracemodel -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="mdpa.gdpr.dfdconverter.tracemodel.tracemodel.presentation.TracemodelModelWizardID"
+            name="%_UI_TracemodelModelWizard_label"
+            class="mdpa.gdpr.dfdconverter.tracemodel.tracemodel.presentation.TracemodelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/TracemodelModelFile.gif">
+         <description>%_UI_TracemodelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated tracemodel -->
+      <editor
+            id="mdpa.gdpr.dfdconverter.tracemodel.tracemodel.presentation.TracemodelEditorID"
+            name="%_UI_TracemodelEditor_label"
+            icon="icons/full/obj16/TracemodelModelFile.gif"
+            extensions="tracemodel"
+            class="mdpa.gdpr.dfdconverter.tracemodel.tracemodel.presentation.TracemodelEditor"
+            contributorClass="mdpa.gdpr.dfdconverter.tracemodel.tracemodel.presentation.TracemodelActionBarContributor">
+      </editor>
+   </extension>
+</plugin>

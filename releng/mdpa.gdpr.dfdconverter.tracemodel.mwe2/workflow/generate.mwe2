@@ -1,0 +1,65 @@
+module mdpa.gdpr.dfdconverter.tracemodel.mwe2
+
+import org.eclipse.emf.mwe.utils.StandaloneSetup
+import org.eclipse.emf.mwe.utils.DirectoryCleaner
+import org.eclipse.emf.mwe2.ecore.EcoreGenerator
+import tools.mdsd.ecoreworkflow.mwe2lib.bean.EclipseRCPSupportingStandaloneSetup
+import tools.mdsd.ecoreworkflow.mwe2lib.component.*
+
+var workspaceRoot = "../../../" 
+
+Workflow {
+		bean = EclipseRCPSupportingStandaloneSetup {
+		scanClassPath = true
+		platformUri = workspaceRoot
+
+
+		
+		uriMap = {
+			from = "platform:/plugin/tools.mdsd.modelingfoundations.identifier/model/identifier.genmodel"
+			to = "platform:/resource/tools.mdsd.modelingfoundations.identifier/model/identifier.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/tools.mdsd.modelingfoundations.identifier/model/identifier.ecore"
+			to = "platform:/resource/tools.mdsd.modelingfoundations.identifier/model/identifier.ecore"
+		}
+		uriMap = {
+			from = "platform:/plugin/mdpa.gdpr.metamodel/model/GDPR.ecore"
+			to = "platform:/resource/mdpa.gdpr.metamodel/model/GDPR.ecore"
+		}
+		uriMap = {
+			from = "platform:/plugin/mdpa.gdpr.metamodel/model/GDPR.genmodel"
+			to = "platform:/resource/mdpa.gdpr.metamodel/model/GDPR.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.dataflowanalysis.dfd.datadictionary/model/datadictionary.ecore"
+			to = "platform:/resource/org.dataflowanalysis.dfd.datadictionary/model/datadictionary.ecore"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.dataflowanalysis.dfd.datadictionary/model/datadictionary.genmodel"
+			to = "platform:/resource/org.dataflowanalysis.dfd.datadictionary/model/datadictionary.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.dataflowanalysis.dfd.dataflowdiagram/model/dataflowdiagram.ecore"
+			to = "platform:/resource/org.dataflowanalysis.dfd.dataflowdiagram/model/dataflowdiagram.ecore"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.dataflowanalysis.dfd.dataflowdiagram/model/dataflowdiagram.genmodel"
+			to = "platform:/resource/org.dataflowanalysis.dfd.dataflowdiagram/model/dataflowdiagram.genmodel"
+		}
+
+
+
+	}
+
+	component = EcoreGenerator {
+		generateCustomClasses = false
+		generateEdit = true
+		generateEditor = true
+		genModel = "platform:/resource/mdpa.gdpr.dfdconverter.tracemodel/model/tracemodel.genmodel"
+		srcPath = "platform:/resource/mdpa.gdpr.dfdconverter.tracemodel/src-gen"
+		srcPath = "platform:/resource/mdpa.gdpr.dfdconverter.tracemodel.edit/src-gen"
+		srcPath = "platform:/resource/mdpa.gdpr.dfdconverter.tracemodel.edior/src-gen"
+	}
+	
+}

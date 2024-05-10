@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+	<feature id="mdpa.gdpr.dfdconverter.tracemodel.feature">
+		<category name="dfdconverter.tracemodel" />
+	</feature>
+	<category-def name="dfdconverter.tracemodel" label="TraceModel for DFD2GDPR Converter" />
+</site>

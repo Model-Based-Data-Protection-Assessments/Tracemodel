@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/mdpa.gdpr.dfdconverter.tracemodel/src-gen" creationIcons="false"
+    editDirectory="/mdpa.gdpr.dfdconverter.tracemodel.edit/src-gen" editorDirectory="/mdpa.gdpr.dfdconverter.tracemodel.editor/src-gen"
+    modelPluginID="mdpa.gdpr.dfdconverter.tracemodel" modelName="Tracemodel" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" usedGenPackages="../../tools.mdsd.modelingfoundations.identifier/model/identifier.genmodel#//identifier ../../org.dataflowanalysis.dfd.dataflowdiagram/model/dataflowdiagram.genmodel#//dataflowdiagram ../../mdpa.gdpr.metamodel/model/GDPR.genmodel#//GDPR ../../org.dataflowanalysis.dfd.datadictionary/model/datadictionary.genmodel#//datadictionary"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>tracemodel.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Tracemodel" basePackage="mdpa.gdpr.dfdconverter.tracemodel"
+      disposableProviderFactory="true" ecorePackage="tracemodel.ecore#/">
+    <genClasses ecoreClass="tracemodel.ecore#//Trace">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tracemodel.ecore#//Trace/processing"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tracemodel.ecore#//Trace/node"/>
+    </genClasses>
+    <genClasses ecoreClass="tracemodel.ecore#//TraceModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tracemodel.ecore#//TraceModel/TracesList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tracemodel.ecore#//TraceModel/FlowList"/>
+    </genClasses>
+    <genClasses ecoreClass="tracemodel.ecore#//FlowElement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tracemodel.ecore#//FlowElement/flow"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tracemodel.ecore#//FlowElement/sourceID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tracemodel.ecore#//FlowElement/destinationID"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
