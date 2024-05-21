@@ -2,7 +2,7 @@ name: Build Updatesite
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   release:
     types: [created]
   pull_request:
@@ -30,14 +30,14 @@ jobs:
       - name: Build and Verify
         run: mvn clean verify
       - name: Publish Nightly Update Site
-        if: github.event_name != 'release' && github.ref == 'refs/heads/main' && github.repository_owner == 'Model-Based-Data-Protection-Assessments'
+        if: github.event_name != 'release' && github.ref == 'refs/heads/master' && github.repository_owner == 'Model-Based-Data-Protection-Assessments'
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.UPDATE_SITE_DEPLOY_KEY }}
           external_repository: Model-Based-Data-Protection-Assessments/updatesite
           destination_dir: nightly/tracemodel-metamodel/
           publish_dir: releng/mdpa.gdpr.dfdconverter.tracemodel.updatesite/target/repository
-          publish_branch: main
+          publish_branch: master
       - name: Publish Release Update Site
         if: github.event_name == 'release' && github.repository_owner == 'Model-Based-Data-Protection-Assessments'
         uses: peaceiris/actions-gh-pages@v3
@@ -46,6 +46,6 @@ jobs:
           external_repository: Model-Based-Data-Protection-Assessments/updatesite
           destination_dir: release/tracemodel-metamodel/${{ github.event.release.tag_name }}
           publish_dir: releng/mdpa.gdpr.dfdconverter.tracemodel.updatesite/target/repository
-          publish_branch: main
+          publish_branch: master
           
 
